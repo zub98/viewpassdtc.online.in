@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Times New Roman', Arial, sans-serif, Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6f7f9;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+}
+
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #008080;
+    margin-bottom: 1px;
+    content: "E-Bus Pass";
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #008080;
+
+}
+
+.bus-pass-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('bg.png');
+    background-size: 60px 60px;
+    background-repeat: repeat;
+    background-position: top left;
+    max-block-size: 425px;
+
+}
+
+.pass-content {
+    padding: 1px;
+}
+
+.pass-content h1 {
+    font-size: 1.3em;
+    color: #008080;
+    margin-bottom: 10px;
+}
+
+.user-photo {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 1px;
+}
+
+.user-name {
+    font-size: 1.27em;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.user-type {
+    font-size: 1em;
+    color: #333333;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+
+.bus-pass-no {
+    font-size: 1.3em;
+    color: #333333;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.bus-pass-no span {
+    color: #008000;
+    font-weight: bold;
+
+}
+
+.validity {
+    font-size: 1.1em;
+    color: #ff0000;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+
+}
+
+.signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.signature img {
+    width: 60px;
+    height: auto;
+}
+
+.sign-text {
+    font-size: 0.7em;
+    margin-left: 5px;
+    color: #333333;
+}
+
+.qr-code {
+    margin-bottom: 10px;
+}
+
+.qr-code img {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .bus-pass-container {
+        max-width: 500px;
+    }
+
+    .user-photo {
+        width: 120px;
+        height: 140px;
+    }
+
+    .qr-code img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.pass-content h1 {
+
+    text-decoration: underline;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box {
+    background-color: rgb(14, 138, 140);
+    /* Green background */
+    padding: 10px;
+    /* Padding for spacing */
+    text-align: center;
+    /* Center the text */
+    color: white;
+    /* White text color */
+    position: fixed;
+    /* Fix position at the bottom */
+    bottom: 0;
+    /* Align to the bottom */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    height: 70px;
+
+}
+
+body {
+    margin: 0;
+    /* Remove default margin */
+    padding-bottom: 50px;
+    /* Space for the footer */
+}
+
+.signature-qr-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    position: relative;
+
+}
+
+.signature-qr-container::before {
+    content: "";
+    /* Create a pseudo-element */
+    width: 1px;
+    /* Width of the vertical line */
+    background-color: #ccc;
+    /* Color of the vertical line */
+    height: 100%;
+    /* Full height of the container */
+    position: absolute;
+    /* Position it absolutely */
+    left: 50%;
+    /* Center it horizontally */
+    transform: translateX(-50%);
+    /* Adjust for the width */
+}
